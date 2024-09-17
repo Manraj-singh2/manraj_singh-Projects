@@ -1,0 +1,350 @@
+body{
+    font-family: Helvetica, Courier, monospace;
+}
+
+.textContent h1{
+    font-family: 'Bebas Neue';
+    font-size: 150%;
+    font-weight: 500;
+}
+
+.textContent h2{
+    font-family: Helvetica;
+    font-size: 120%;
+    font-weight: 600;
+}
+
+@keyframes type {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+#bar{
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: white;    
+    position: fixed;
+    top: 15px;
+    left: 75px;
+    right: 100px;
+    z-index: 1000;
+
+}
+
+#navRap{
+    background-color: #fff4f4;
+    
+}
+
+.content{
+   
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    
+}
+
+.textContent{
+
+    font-size: 150%;
+    margin:200px 0px 150px 150px;
+}
+
+.meLarge{
+    margin-top: 100px;
+    margin-left: 70%;
+    height: 500px;
+    max-width: 600px;
+}
+
+.meSmall{
+    display: none;
+}
+
+@media screen and (max-width: 950px) {
+    .meLarge {
+      display: none;
+    }
+
+    .meSmall{
+       display: block;
+        height: 400px;
+        
+        margin: auto;
+       margin-top: 15%;
+    }
+
+    .content{
+        display: inline;
+        
+    }
+
+    .textContent{
+       
+        font-size: 200%;
+        position:relative;
+        top: -100px;
+        right: 20%; 
+       
+    }
+
+    .star{
+        display: absolute;
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .star{
+        display: none;
+    }
+
+}
+
+.btn{
+    background-color: orangered;
+    color: white;
+
+    &:hover{
+        background-color: orange;
+        color: white;
+    }
+}
+
+.emoji{
+
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+}
+
+.star{
+    height:20px;
+    position: absolute;
+    top: 30%;
+    left: 85%;
+}
+
+.backArrow{
+    height: 20px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+}
+
+.circle{
+    height:20px;
+    position: absolute;
+    top: 70%;
+    left: 90%;
+}
+
+.type  h1 {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.type h1::before{
+    content: "Hello";
+    animation: words 20s infinite, typing 20s steps(14) infinite;
+}
+
+.type h1::after{
+
+    content: "";
+    font-weight: 300;
+    
+    animation: cursor .8s infinite;
+}
+
+@keyframes cursor{
+
+    0% { content: "|"; }
+    50% { content: ""; }
+    100% { content: "|"; }
+
+}
+
+@keyframes words{
+
+    0%,20%{
+        content: "Hello";
+    }
+
+    21%,40%{
+        content: "Hola";
+    }
+    
+    41%,60%{
+        content: "Ciao";
+    }
+
+    61%,80%{
+        content: "Bonjour";
+    }
+    
+    81%,100%{
+        content: "Ola";
+    }
+}
+
+@keyframes typing{
+
+    0%, 100% { width: 0; }
+    50% { width: 100%; } 
+
+}
+
+.projects{
+
+    padding: 100px;
+
+}
+
+.aboutMe{
+
+    padding: 100px;
+    background-color: rgb(243, 242, 242);
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.intro-row {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+}
+
+
+.intro-left {
+    flex: 1;
+    max-width: 30%;
+    padding-right: 20px;
+}
+
+.intro-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.intro-subtitle {
+    font-size: 1.2em;
+    color: gray;
+}
+
+
+.intro-right {
+    flex: 2; 
+    max-width: 70%;
+}
+
+.intro-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .intro-row {
+        flex-direction: column;
+    }
+    
+    .intro-left, .intro-right {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .intro-title {
+        text-align: center;
+    }
+
+    .intro-subtitle {
+        text-align: center;
+    }
+}
+
+.card{
+
+    &:hover{
+
+
+        box-shadow: 10px 20px 20px lightgray;
+
+    }
+}
+
+.footer{
+
+    background-color:rgb(243, 242, 242);
+    padding: 100px;
+
+}
+
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.contact-header h1 {
+    font-size: 2.5em;
+    color: #4a4a4a;
+    margin-bottom: 0;
+}
+
+.contact-header p {
+    font-size: 1.2em;
+    color: #999;
+    margin-top: 5px;
+}
+
+
+.contact-details {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+
+.contact-box h3 {
+    font-size: 1.5em;
+    color: #4a4a4a;
+}
+
+.contact-box p {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-box {
+        margin-bottom: 20px;
+    }
+}
+
+.top{
+    margin-left:1200px; position:fixed; bottom:10px; right:10px;
+}
